@@ -16,7 +16,7 @@ While we were chatting with a friend, he asked
 
 I always would liked to work with OpenStreetMap and Overpass API, therefore I rolled up my sleeves and researched how to use a map API. In this post, I would like to share my journey of getting used to gathering, processing and visualizing the map data. 
 
-# Getting the Data
+## Getting the Data
 There exist many [processed data providers](https://wiki.openstreetmap.org/wiki/Processed_data_providers). For example, you may use [geofabrik](https://download.geofabrik.de/europe.html) for Europe country specific data or [here](https://download.openstreetmap.fr/extracts/) for other continents as well but I think [Overpass API](https://overpass-turbo.eu/) is just amazing. You only need to get used to its query language. Here is an example:
 
 ```
@@ -59,10 +59,10 @@ Additionally, if you would like to filter two keywords at the same time:
 nwr["highway"="bus_stop"]["network"="İETT"]({{bbox}});
 ```
 
-## İstanbul Specific Data Collection
+### İstanbul Specific Data Collection
 İBB has it's own [open data portal](https://data.ibb.gov.tr/) that shares many data including public transportation related ones. There exists [one](https://data.ibb.gov.tr/dataset/rayli-sistem-istasyon-noktalari-verisi) about the location of railed systems (just newly updated on 5 Jan 2025). 
 
-# Choice of Library
+## Choice of Library
 Like I mentioned, there are many libraries in python for map visualization or map data processing. A couple of examples:
 - [pyosmium](https://docs.osmcode.org/pyosmium/latest/)
 	- [Examples](https://github.com/osmcode/pyosmium/tree/master/examples) directory is helpful.
@@ -76,14 +76,14 @@ Like I mentioned, there are many libraries in python for map visualization or ma
 - [folium](https://python-visualization.github.io/folium/latest/)
 	- Interactive leaflet in python. Visualizing points or areas is super simple.
 
-# Methodology
+## Methodology
 The method is straightforward: draw a circle of radius R around each bus/metro station, then calculate the total area covered—accounting for overlapping regions—and subtract it from the total area of Istanbul.
 
 For calculating union, I have used `shapely`'s `unary_union` method which simplified everything a lot.
 
 ![Simple visualization of bus stops across İstanbul](transportation.webp)
 
-# Answer to the initial question
+## Answer to the initial question
 Here are total areas of that circles (accounting overlapping):
 
 | Mode  | 100m     | 500m      | 1000m     |
@@ -100,7 +100,7 @@ If we say İstanbul to have an area of 5461 km2 (including forests and other non
 | Metro | 0.18%  | 4.09%  | 12.10%  |
 
 
-# Final Thoughts
+## Final Thoughts
 In future work, I intend to exclude non-urban areas from the analysis. Since much of Istanbul’s 5461 km2 total area is uninhabited, recalculating coverage based strictly on populated zones will yield a more accurate representation of transit accessibility.
 
 As always, script can be accessed in [github](https://github.com/Fansesi/transportation-coverage).

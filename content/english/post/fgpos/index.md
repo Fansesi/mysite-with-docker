@@ -14,15 +14,15 @@ weight: 1
 
 I and my friend Eray attended to a Teknofest competition about triangulating positions from given 5G connection data. During the project, I have learned a lot about 5G terminology, radio waves and location triangulation algorithms.
 
-# Task Description
+## Task Description
 Using the 5G base station configurations, environmental data, and uplink (UL), downlink (DL), and scanner data from the İTÜ Campus, develop a system that can predict the location of a user equipment (UE) in with an another set of inference-time UL, DL and scanner data.
 
-# TL,DR;
+## TL,DR;
 We have simulated the propagation of radio signals with the given base configuration data and have developed a special triangulation algorithm that utilizes the the simulation results as well as the inference-time data.
 
 If you would like to take a look at our final presentation, you may do so via the [public canva link](https://www.canva.com/design/DAGvSi44gCM/z8-QGGzo-xZ1BTzUfVRRGQ/edit?utm_content=DAGvSi44gCM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton).
 
-# Detailed Methodology and Journey
+## Detailed Methodology and Journey
 ![Simple 2D visualization of what we have as the given data](campus_map_combined_2D.webp)
 
 What we basically tried to do was using the base station configuration data and İTÜ campus's geometric data, simulate the propagation of radio waves using [SionnaRT](https://nvlabs.github.io/sionna/) (which actually uses [mitsuba](https://mitsuba.readthedocs.io/) at its core).
@@ -58,7 +58,7 @@ After this point, the problem may be in anywhere, heck the only thing working fi
 As an end resort, in the name of post-processing, I even tried to train a simple NN to give our simulation predictions and get the final results but it proved no use like I expected.
 
 
-# Final Words
+## Final Words
 We could have gone for training a simple neural network for this task. I believe almost all of the other competitors tried that. We wanted to go for a simulation not because we can't do NN but to learn how difficult it is to simulate such large environment and breach that sim-to-real gap. Even though we did not get a podium, it was a brilliant experience to be a finalist and *literally* run to our predictions.
 
 What we did wrong? **Simulation**. İTÜ campus is pretty hilly, I believe it was the main reason why our simulation results were sky high.

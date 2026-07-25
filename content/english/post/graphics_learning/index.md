@@ -19,7 +19,7 @@ On the other hand, I’ve always been obsessed with the way light plays with eve
 
 For the past couple of months or so I have been reading and researching about fields of computer graphics and its current state. I would like to document my journey as I discover how things work and useful resources for an interested reader to take a look at.
 
-# What I did so far
+## What I did so far
 Books I read:
 
 * [LearnOpenGL](https://learnopengl.com/): Amazing book that introduces concepts step by step. Explains every concept beautifully first by theory and code. By not fully giving the full source code over and over again at the end of each chapter, it provides the important/new parts of the code and keeps the text clean.
@@ -38,7 +38,7 @@ Channels I watched:
 Research I have read about:
 - [Mitsuba](https://mitsuba.readthedocs.io/): differential rendering is a great subject. I have read a couple of papers about it but I need more.
 
-# What I would like to do
+## What I would like to do
 Books to read: 
 
 - [Real Time Rendering](https://www.realtimerendering.com/)
@@ -48,6 +48,6 @@ Projects:
 - Write a simple 3D game only with OpenGL and C++. Its design should be clever so that I should be able to showcase what I learned reading OpenGL.
 - Enhance the ray tracer in a weekend.
 
-# Additional resources
+## Additional resources
 [GICompendium](https://www.cs.cornell.edu/courses/cs6620/2009sp/Homework/hw2/GICompendium.pdf): A quick cheat sheet about computer graphics and global illumination.
 [Self Shadow](https://blog.selfshadow.com/): Notes and courses from SIGGRAPH.
