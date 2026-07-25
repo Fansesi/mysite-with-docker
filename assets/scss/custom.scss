@@ -1,0 +1,65 @@
+/* ==========================================================================
+   Custom overrides for Hugo Theme Stack
+   ========================================================================== */
+
+/* --- Layout & Margin Improvements --- */
+
+/* Reduce gap between columns for a tighter layout */
+:root {
+    --section-separation: 25px;
+}
+
+/* Extended mode (with right sidebar / TOC) — give main content more room */
+.container.extended {
+    @include respond(md) {
+        max-width: 1024px;
+        --left-sidebar-max-width: 20%;
+        --right-sidebar-max-width: 22%;
+    }
+
+    @include respond(lg) {
+        max-width: 1280px;
+        --left-sidebar-max-width: 16%;
+        --right-sidebar-max-width: 20%;
+    }
+
+    @include respond(xl) {
+        max-width: 1536px;
+        --left-sidebar-max-width: 12%;
+        --right-sidebar-max-width: 18%;
+    }
+}
+
+/* Compact mode (no right sidebar) — give main content more room */
+.container.compact {
+    @include respond(md) {
+        max-width: 768px;
+        --left-sidebar-max-width: 20%;
+    }
+
+    @include respond(lg) {
+        max-width: 1024px;
+        --left-sidebar-max-width: 16%;
+    }
+
+    @include respond(xl) {
+        max-width: 1280px;
+        --left-sidebar-max-width: 12%;
+    }
+}
+
+/* --- Typography Improvements --- */
+
+/* Merriweather for article body text (better long-form reading) */
+/* Inter for UI elements (clean, modern sans-serif) */
+:root {
+    --base-font-family: "Inter", var(--sys-font-family), sans-serif;
+    --article-font-family: "Merriweather", var(--base-font-family), serif;
+    --article-font-size: 1.8rem;
+
+    @include respond(md) {
+        --article-font-size: 1.9rem;
+    }
+
+    --article-line-height: 2.05;
+}
