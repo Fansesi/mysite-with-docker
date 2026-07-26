@@ -2,7 +2,7 @@
 title: Treethink - Async Tree Search for Formal Math
 description: Background, design decisions, results, and what I learned during the process
 slug: treethink
-date: 2026-02-19 00:00:00+0000
+date: 2026-07-26 00:00:00+0000
 categories:
     - Project
 tags:    
