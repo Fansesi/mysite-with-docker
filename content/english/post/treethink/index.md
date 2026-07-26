@@ -11,7 +11,7 @@ tags:
 weight: 1
 ---
 
-![A sample proof tree, constructed using TreeThink.](sample_graphviz_large.webp)
+![A sample proof tree in isabelle formal proof language, constructed using TreeThink.](sample_graphviz_large.webp)
 
 ## TL;DR
 `TreeThink` is a modular and fully asynchronous library for tree search in the domain of formal mathematical reasoning. In this post, I aim to explain its inner workings, design decisions, and ultimately what I gained during the project. 
