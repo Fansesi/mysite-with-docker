@@ -1,6 +1,6 @@
 ---
 title: Problem solving does not necessitate producing thoughts
-description: Some ideas, some concerns, some suggestions.
+description:
 slug: problem_solving
 date: 2026-07-22 00:00:00+0000
 categories:
